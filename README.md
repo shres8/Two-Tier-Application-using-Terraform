@@ -27,9 +27,9 @@ This project automates the deployment of a **highly available and scalable two-t
 - **Shell scripting** (optional for provisioning)
 
 ## 🔐 Backend Details
-S3 Bucket: Stores the Terraform state file (project.tfstate)
-Key: Path within the bucket where the state file is stored
-Region: AWS region where the S3 bucket and DynamoDB table are located
-DynamoDB Table: Used for state locking and consistency to prevent concurrent modifications
+- S3 Bucket: Stores the Terraform state file (project.tfstate)
+- Key: Path within the bucket where the state file is stored
+- Region: AWS region where the S3 bucket and DynamoDB table are located
+- DynamoDB Table: Used for state locking and consistency to prevent concurrent modifications
 
 
