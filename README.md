@@ -27,6 +27,18 @@ This project automates the deployment of a highly available, secure, and scalabl
 - **Linux/Ubuntu** (for EC2 instances)  
 - **Shell scripting** (optional for provisioning)
 
+
+## ▶️ How to Run
+
+1. **Install Terraform** and configure AWS CLI with credentials.
+2. **Clone the repo** and navigate to the project directory.
+3. **Set variables** in `terraform.tfvars` or via CLI.
+4. **Initialize Terraform**:
+   ```bash
+   terraform init
+   terraform apply
+   ```
+
 ## ☁️ Remote Backend Configuration
 
 This project uses a **remote backend** to manage Terraform state files securely and collaboratively.
