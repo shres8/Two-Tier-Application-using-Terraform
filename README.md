@@ -3,11 +3,11 @@
 ## Architecture Diagram
 ![architecture](https://github.com/user-attachments/assets/811bba8d-c2c9-407a-a962-92f82d21941d)
 
-## 🖥️ Installation of Terraform
+## Installation of Terraform
 
 **Note**: Follow blog to Install the Terraform and other dependency. [Terrafrom]()
 
-👉 let install dependency to deploy the application 
+let install dependency to deploy the application 
 
 ```sh
 cd book_shop_app
@@ -37,7 +37,7 @@ terraform {
   }
 }
 ```
-### 🏠Lets setup the variable for our Infrastructure
+### Lets setup the variable for our Infrastructure
 create one file with the name of `terraform.tfvars` 
 ```sh
 vim book_shop_app/terraform.tfvars
@@ -73,13 +73,13 @@ type below command to see plan of the exection
 terraform plan
 ```
 
-✨Finally, HIT the below command to deploy the application...
+Finally, HIT the below command to deploy the application...
 ```sh
 terraform apply 
 ```
 
 type `yes`, it will prompt you for permission..
 
-**Thank you so much for reading..😅**
+**Thank you so much for reading..**
 
 
