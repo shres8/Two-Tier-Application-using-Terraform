@@ -299,3 +299,15 @@ This section sets up a **DNS record** in AWS Route 53 to map a custom domain to 
 
 > 📝 Make sure your domain is correctly registered and validated in Route 53 before applying this configuration.
 
+
+## ⚠️ Limitations
+
+While this project demonstrates a robust and scalable infrastructure setup, there are a few limitations to consider:
+
+- **Hardcoded Parameters**: Some values (e.g., subnet CIDRs, instance types, scaling thresholds) are statically defined and may require manual updates for different environments.
+- **No CI/CD Integration**: The project does not include automated deployment pipelines or integration with tools like Jenkins, GitHub Actions, or Terraform Cloud.
+- **Limited Monitoring & Logging**: Basic CloudWatch alarms are configured, but advanced monitoring, centralized logging, and alerting are not included.
+- **Single Region Deployment**: The infrastructure is deployed in a single AWS region, which may not be sufficient for global failover or disaster recovery.
+- **No Secrets Management**: Database credentials and other sensitive values are passed via variables without integration with AWS Secrets Manager or SSM Parameter Store.
+
+> These limitations can be addressed in future iterations to make the setup more production-ready and secure.
