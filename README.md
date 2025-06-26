@@ -3,32 +3,44 @@
 ## Architecture Diagram
 ![architecture](https://github.com/user-attachments/assets/811bba8d-c2c9-407a-a962-92f82d21941d)
 
-## Installation of Terraform
+🌐 Two-Tier Application on AWS using Terraform
+📘 Overview
+This project automates the deployment of a highly available and scalable two-tier architecture on Amazon Web Services (AWS) using Terraform. It provisions a complete infrastructure stack including networking, compute, storage, and content delivery components.
 
-**Note**: Follow blog to Install the Terraform and other dependency. [Terrafrom]()
+🧩 Architecture Components
+VPC: Custom Virtual Private Cloud with public and private subnets
+NAT Gateway: Enables internet access for private subnets
+Security Groups: Fine-grained access control for EC2, RDS, and ALB
+Key Pair: For secure SSH access to EC2 instances
+Application Load Balancer (ALB): Distributes traffic across EC2 instances
+Auto Scaling Group (ASG): Ensures high availability and scalability of the application tier
+Amazon RDS: Managed relational database in the private subnet
+CloudFront: CDN for faster content delivery
+Route 53: DNS management for domain routing
 
-let install dependency to deploy the application 
+🛠️ Technologies Used
+Terraform
+AWS Services: VPC, EC2, RDS, ALB, ASG, CloudFront, Route 53
+Linux/Ubuntu (for EC2 instances)
+Shell scripting (optional for provisioning)
 
-```sh
-cd book_shop_app
-terraform init 
-```
-
-**Note**: we need public key and private key for our server so follow below procedure.
-
-```sh
-cd modules/key/
-ssh-keygen.exe 
-```
-above command ask for key name then give `client_key` it will create pair of keys one public and one private. you can give any name you want but then you need to edit the terraform file
-
-edit below file accoding to your configuration
-```sh
-vim book_shop_app/backend.tf
-```
-add below code in book_shop_app/backend.tf
-```sh
-terraform {
+📦 Project Structure
+.
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+├── modules/
+│   ├── vpc/
+│   ├── nat/
+│   ├── security-group/
+│   ├── key-pair/
+│   ├── alb/
+│   ├── asg/
+│   ├── rds/
+│   ├── cloudfront/
+│   └── route53/
+└── README.md
   backend "s3" {
     bucket = "BUCKET_NAME"
     key    = "backend/FILE_NAME_TO_STORE_STATE.tfstate"
