@@ -35,9 +35,12 @@ This project automates the deployment of a highly available, secure, and scalabl
 3. **Set variables** in `terraform.tfvars` or via CLI.
 4. **Initialize Terraform**:
    ```bash
-   terraform init` terraform apply
+   terraform init
    ```
-
+5. **Apply Terraform**:
+   ```bash
+   terraform init
+   ```
 ## ☁️ Remote Backend Configuration
 
 This project uses a **remote backend** to manage Terraform state files securely and collaboratively.
