@@ -3,11 +3,11 @@
 ## Architecture Diagram
 ![architecture](https://github.com/user-attachments/assets/811bba8d-c2c9-407a-a962-92f82d21941d)
 
-🌐 Two-Tier Application on AWS using Terraform
-📘 Overview
+🌐 ## Two-Tier Application on AWS using Terraform
+📘 ## Overview
 This project automates the deployment of a highly available and scalable two-tier architecture on Amazon Web Services (AWS) using Terraform. It provisions a complete infrastructure stack including networking, compute, storage, and content delivery components.
 
-🧩 Architecture Components
+🧩 ## Architecture Components
 VPC: Custom Virtual Private Cloud with public and private subnets
 NAT Gateway: Enables internet access for private subnets
 Security Groups: Fine-grained access control for EC2, RDS, and ALB
