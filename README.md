@@ -26,11 +26,21 @@ This project automates the deployment of a **highly available and scalable two-t
 - **Linux/Ubuntu** (for EC2 instances)  
 - **Shell scripting** (optional for provisioning)
 
-## 🔐 Backend Details
-- S3 Bucket: Stores the Terraform state file (project.tfstate)
-- Key: Path within the bucket where the state file is stored
-- Region: AWS region where the S3 bucket and DynamoDB table are located
-- DynamoDB Table: Used for state locking and consistency to prevent concurrent modifications
+## ☁️ Remote Backend Configuration
+
+This project uses a **remote backend** to manage Terraform state files securely and collaboratively.
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket         = "tf-state-shres8-101"
+    key            = "backend/project.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "remote-backend"
+  }
+}
+
+
 ## 🌐 VPC and Networking Configuration
 
 This module sets up the foundational networking infrastructure for the two-tier application.
